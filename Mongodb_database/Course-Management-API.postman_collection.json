@@ -1,0 +1,90 @@
+{
+	"info": {
+		"_postman_id": "405e1602-f7b6-4dd5-be11-b7e898d468a0",
+		"name": "Course-Management-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38161430"
+	},
+	"item": [
+		{
+			"name": "createCourse",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb3Vyc2VOYW1lIjoiSHVzc2VpbmJlcmctZm9yLWJlZ2lubmVycyIsImNvdXJzZUlkIjoidGVzdGNvdXJzZV9pZCIsImlhdCI6MTczMzIwMzgxMSwiZXhwIjoxNzMzMjA3NDExfQ.G1K_Rn28aBy9iCta2ee3kzBLffew8Oq3bghfL9laIiQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"API for advanced learning\",\r\n  \"description\": \"Get started with API development using EXPRESS.js and other tools and framworks\",\r\n  \"modules\": [\r\n    {\r\n      \"moduleName\": \"Getting Started\",\r\n      \"videos\": [\r\n        { \"title\": \"What is Node.js?\", \"url\": \"http://example.com/node-intro\" },\r\n        { \"title\": \"Installing Node.js\", \"url\": \"http://example.com/node-install\" }\r\n      ]\r\n    },\r\n    {\r\n      \"moduleName\": \"Building Your First App\",\r\n      \"videos\": [\r\n        { \"title\": \"Hello World Application\", \"url\": \"http://example.com/node-hello-world\" },\r\n        { \"title\": \"Understanding the Event Loop\", \"url\": \"http://example.com/node-event-loop\" }\r\n      ]\r\n    }\r\n  ]\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/courses/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"courses",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update-course",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb3Vyc2VOYW1lIjoiSHVzc2VpbmJlcmctZm9yLWJlZ2lubmVycyIsImNvdXJzZUlkIjoidGVzdGNvdXJzZV9pZCIsImlhdCI6MTczMzIwMDQ5MSwiZXhwIjoxNzMzMjA0MDkxfQ.HLWt-sxD1wmmBPy98UhSvoG36rrpe3glM_l-i4ZrGbI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"moduleName\": \"Advanced JavaScript\",\r\n  \"videos\": [\r\n    {\r\n      \"title\": \"Asynchronous JavaScript\",\r\n      \"url\": \"http://example.com/js-async\"\r\n    }\r\n  ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/courses/674e4fafe71c55d4b0859335",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"courses",
+						"674e4fafe71c55d4b0859335"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
