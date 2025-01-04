@@ -1,4 +1,4 @@
-Course-Management-API
+# Course-Management-API
 
 This is a Back-End project for creating an API to update courses, including nested modules and videos. Each course can have multiple modules, and each module can contain multiple videos. This API allows updates to any part of the course: adding/removing modules, updating individual videos of a module, etc.
 
